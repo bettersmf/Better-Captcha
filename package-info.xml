@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "https://www.simplemachines.org/xml/package-info">
+<package-info xmlns="https://www.simplemachines.org/xml/package-info" xmlns:smf="https://www.simplemachines.org/">
+	<id>bettersmf:better-captcha</id>
+	<name>Better CAPTCHA</name>
+	<version>0.1.0a</version>
+	<type>modification</type>
+	<upgrade from="0.1.0-dev1,0.1.0-dev2,0.1.0-dev3,0.1.0-dev3a,0.1.0-dev3b,0.1.0-dev4a,0.1.0-dev4b,0.1.0-dev4c,0.1.0-dev4d,0.1.0-dev4e,0.1.0-dev4f,0.1.0" for="2.1 - 2.1.99">
+		<require-file name="Sources/BetterCaptcha.php" destination="$sourcedir" />
+		<require-file name="Themes/default/BetterCaptchaAdmin.template.php" destination="$themedir" />
+		<require-file name="Themes/default/languages/BetterCaptcha.english.php" destination="$languagedir" />
+		<require-file name="Themes/default/images/admin/better_captcha.png" destination="$themes_dir/default/images/admin" />
+		<require-file name="Themes/default/images/admin/big/better_captcha.png" destination="$themes_dir/default/images/admin/big" />
+		<code>better_captcha_install.php</code>
+	</upgrade>
+	<install for="2.1 - 2.1.99">
+		<require-file name="Sources/BetterCaptcha.php" destination="$sourcedir" />
+		<require-file name="Themes/default/BetterCaptchaAdmin.template.php" destination="$themedir" />
+		<require-file name="Themes/default/languages/BetterCaptcha.english.php" destination="$languagedir" />
+		<require-file name="Themes/default/images/admin/better_captcha.png" destination="$themes_dir/default/images/admin" />
+		<require-file name="Themes/default/images/admin/big/better_captcha.png" destination="$themes_dir/default/images/admin/big" />
+		<code>better_captcha_install.php</code>
+	</install>
+	<uninstall for="2.1 - 2.1.99">
+		<code>better_captcha_install.php</code>
+		<database>better_captcha_uninstall_data.php</database>
+		<remove-file name="$sourcedir/BetterCaptcha.php" />
+		<remove-file name="$themedir/BetterCaptchaAdmin.template.php" />
+		<remove-file name="$languagedir/BetterCaptcha.english.php" />
+	
+		<remove-file name="$themes_dir/default/images/admin/better_captcha.png" />
+		<remove-file name="$themes_dir/default/images/admin/big/better_captcha.png" />
+	</uninstall>
+</package-info>
